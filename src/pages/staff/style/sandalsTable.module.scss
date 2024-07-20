@@ -1,0 +1,26 @@
+@import "../../../../public/assets/style/variables.scss";
+
+.package_list_table {
+  // min-height: 834px;
+}
+
+.package_list_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+
+.package_title-text {
+  @include dashboard_font_text;
+  font-size: 25px;
+  margin-bottom: 0px !important;
+}
+
+.ref-link {
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

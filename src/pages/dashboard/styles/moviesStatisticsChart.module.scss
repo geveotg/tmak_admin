@@ -1,0 +1,44 @@
+.lives-statistics-chart-section,
+.movies-statistics-chart-section {
+  background: #f7f9fb;
+  border-radius: 5px;
+  height: max-content;
+  padding: 20px;
+  margin-top: 10px;
+  width: 100%;
+
+  .title {
+    color: #272727;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .view-more-link {
+    color: #1a73e8;
+    display: block;
+    widows: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .lives-statistics-chart-section__top,
+  .movies-statistics-chart-section__top {
+    gap: 10px;
+    flex-direction:  column !important;
+    align-items: flex-start;
+  }
+}

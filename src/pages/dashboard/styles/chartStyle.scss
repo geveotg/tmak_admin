@@ -1,0 +1,43 @@
+.lives-ComposedChart,
+.series-ComposedChart,
+.movies-ComposedChart {
+  position: relative;
+}
+
+.layer {
+  background-color: rgba(229, 229, 229, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 99;
+}
+
+@media screen and (max-width: 1000px) {
+  .lives-ComposedChart,
+  .movies-ComposedChart,
+  .series-ComposedChart,
+  .most-used-devices-BarChart {
+    .recharts-wrapper {
+      svg {
+        width: 56vw !important;
+      }
+    }
+  }
+
+  .recharts-default-legend {
+    display: none !important;
+  }
+
+  .title-datepicker-container {
+    flex-direction: column;
+  }
+}
+
+.payment-statistics-pie {
+  width: 600px !important;
+
+  .g2-html-annotation {
+    font-size: 20px !important;
+  }
+}

@@ -1,0 +1,132 @@
+@import "../../../public/assets/style/variables.scss";
+
+.dashboard-autorefresh{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+
+.dashboard-page {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: max-content;
+
+  &__used-devices-progres {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    // width: 700px;
+  }
+
+  &__most-used-devices {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+
+.dashboard-statistics {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(290px,1fr));
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.statistics{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(290px,1fr));
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.used-device-progress{
+  grid-column: 1/4;
+}
+
+.g2-tooltip{
+  height: 350px;
+}
+
+
+@media screen and (max-width:1340px) {
+
+}
+
+@media screen and (max-width: 1413px) {
+  .dashboard-page {
+    grid-template-columns: 100% !important;
+  }
+  .dashboard-page__most-used-devices {
+    grid-column: 1/2 !important;
+    grid-row: 1/2 !important;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .dashboard-page__used-devices-progres {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    // width: 100%;
+  }
+
+  .dashboard-page__charts {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .dashboard-page__most-used-devices {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboard-page {
+    padding: 10px 5px;
+    // overflow: hidden;
+  }
+}
+
+
+@media screen and (max-width:1400px) {
+  .dashboard-statistics {
+    grid-template-columns: repeat(3,minmax(290px,1fr));
+  }
+  
+  .used-device-progress{
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .dashboard-statistics {
+    grid-template-columns: repeat(1,minmax(290px,1fr));
+  }
+
+}
+
+@media screen and (max-width:1246px) {
+  .statistics{
+    grid-template-columns: repeat(1,minmax(290px,1fr));
+  }
+
+  .dashboard-statistics {
+    grid-template-columns: repeat(2,minmax(290px,1fr));
+  }
+
+  .used-device-progress{
+    grid-column: 1/2;
+  }
+}

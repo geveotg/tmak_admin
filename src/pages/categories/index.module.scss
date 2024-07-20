@@ -1,0 +1,32 @@
+@import "../../../public/assets/style/variables.scss";
+
+.categories_list_table {
+    // min-height: 834px;
+    position: relative;
+}
+
+.categories_list_title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.coupon_csv_contenair {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories_title-text {
+    @include dashboard_font_text;
+    font-size: 25px;
+    margin-bottom: 0px !important;
+}
+
+.ref-link {
+    white-space: nowrap;
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

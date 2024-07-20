@@ -1,0 +1,6 @@
+@import '../../../public/assets/style/variables.scss';
+
+.action_button{
+    margin: 8px 8px;
+    @include dashboard_font_text
+}

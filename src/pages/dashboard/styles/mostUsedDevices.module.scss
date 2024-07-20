@@ -1,0 +1,36 @@
+.most-used-devices-chart-container {
+  background: #f7f9fb;
+  border-radius: 5px;
+  padding: 25px 16px;
+
+  .title-datepicker-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    margin-bottom: 22px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+} 
+
+@media screen and (max-width:1000px) {
+  .recharts-wrapper{
+    svg{
+      width: 60vw !important;
+    }
+  }
+}
+
+@media screen and (max-width:580px) {
+  .title-datepicker-container{
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .title{
+    margin-bottom: 5px !important;
+  }
+}

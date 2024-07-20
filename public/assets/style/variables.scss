@@ -1,0 +1,91 @@
+$login_background-image: url("../img/backgroundTrue.png");
+$login_background-image_moble: url("../img/backgroundFalse.png");
+$error_color: #bf4342;
+$menu_iteam_color: #f8eb17;
+// $menu_iteam_color:#25f662;
+$text_color: #707070;
+$link-color: #1890ff;
+$link-hover-color: #52a3ef;
+
+@mixin dashboard_font_text {
+    color: $text_color;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+@mixin background() {
+    background-image: url("../img/backgroundFalse.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: calc(-30% + 40%);
+}
+
+@mixin display-center($display, $justify-content, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin display-flex-direction($display, $flex-direction, $align-items) {
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+}
+
+@mixin display-grid {
+    display: grid;
+    grid-gap: 5px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+    border-radius: 10px;
+}
+
+@mixin res-ref-container {
+    width: 100%;
+    margin: 10px 0;
+    box-shadow: rgba(9, 30, 66, 0.25) 0 1px 1px, rgba(9, 30, 66, 0.13) 0 0 1px 1px;
+    background-color: $secondary-background;
+    padding: 0 15px 15px 15px;
+    border-radius: 10px;
+}
+
+@mixin dashboard-statistics-block {
+    margin: 5px 5px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0 1px 1px, rgba(9, 30, 66, 0.13) 0 0 1px 1px;
+    background-color: $secondary-background;
+    border-radius: 10px;
+}
+
+@mixin dashboard-statistics-block-title {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 40px;
+    background-color: $primary-dark;
+}
+
+@mixin dashboard-grafic {
+    width: 90%;
+    height: 200px;
+    margin: 20px auto;
+}
+
+@mixin button {
+    width: 150px;
+    margin: 0 auto;
+}
+
+$primary-color: #4cf661;
+$color: #fff;
+$secondary-background: #fff;
+$danger-color: #bf4342;
+$success-color: #28a745;
+$font-size: 19px;
+$font-style: italic;
+$title-font-size: 22px;
+$font-weight: 700;
+$border-radius: 10px;
+$opacity: 0.8;
+$primary-dark: #1a1a1a;

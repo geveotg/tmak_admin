@@ -1,0 +1,93 @@
+@import "../../../public/assets/style/variables.scss";
+@import "./style/login_form.module.scss";
+
+.logoin_block {
+    align-items: center;
+    height: 100%;
+    background-image: $login_background-image_moble;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_div_container {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoin_container {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+}
+
+.admin_welcome_div {
+    width: 450px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../public/assets/img/8644456.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.welcome_div_img {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+.Xplayer_logo_text {
+    color: antiquewhite;
+}
+
+.login_div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 50px 0px 28px 0px;
+    box-shadow: 3px 3px 11px 4px #b5a7a163;
+    margin: 0% auto;
+}
+
+.login_img {
+    width: 70px;
+    padding-bottom: 30px;
+}
+
+.login-form_google-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+    .admin_welcome_div {
+        display: none;
+    }
+
+    .logoin_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login_div_container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .login_div {
+        width: 310px;
+        min-width: 310px;
+    }
+}

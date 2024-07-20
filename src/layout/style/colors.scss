@@ -1,0 +1,14 @@
+:root {
+    --app-color: black;
+    --active-color: green;
+    --link-color: blue;
+    --active-background: #1a1a1a;
+    --logo-size: 70px;
+}
+
+$app-color: var(--app-color);
+$active-color: var(--active-color);
+$link-color: var(--link-color);
+$active-background: var(--active-background);
+
+$logo-size: var(--logo-size);

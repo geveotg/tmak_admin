@@ -1,0 +1,13 @@
+@import "../index.module.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  cursor: pointer;
+}

@@ -1,0 +1,78 @@
+@import "../../../../public/assets/style/variables.scss";
+
+.dashoard_cards_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.server_device {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  @include dashboard_font_text;
+}
+
+.dashoard_cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.payment-statistics-chart,
+.online-statistics {
+  background: #f7f9fb;
+  border-radius: 5px;
+  padding: 9px 16px;
+  width: 100%;
+}
+
+.payment-chart-date,.title-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .payment-chart-container-title{
+    margin-bottom: 22px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+.online-statistics-title{
+  margin-bottom: 22px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dashoard_cards_img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 900px) {
+  .dashoard_cards {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .dashoard_cards_container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .payment-chart-date {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment-chart-container-title {
+    margin-bottom: 5px !important;
+  }
+}

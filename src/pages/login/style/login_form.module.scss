@@ -1,0 +1,64 @@
+@import "../../../../public/assets/style/variables.scss";
+
+.form-item {
+  text-align: center;
+  margin-top: 35px;
+  a {
+    color: $link-color;
+  }
+  a:hover {
+    color: $link-hover-color;
+  }
+}
+.form-item {
+  margin: 0px !important;
+}
+
+.login-form {
+  width: 80%;
+  margin: 0% auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.close_error {
+  height: 0px;
+  overflow: hidden;
+  transition: 500ms;
+  display: flex;
+  justify-content: center;
+}
+
+.open_error {
+  height: 40px;
+  transition: 500ms;
+  overflow: hidden;
+  margin: 0% auto;
+  display: flex;
+  justify-content: center;
+}
+
+.error_message {
+  color: $error_color;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .login-form {
+    width: 80%;
+    margin: 0% auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-form {
+    width: 90%;
+    margin: 0% auto;
+  }
+}

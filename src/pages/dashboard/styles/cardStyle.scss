@@ -1,0 +1,82 @@
+.dashboard-information-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 20px;
+  column-gap: 10px;
+
+  margin: 10px 0;
+}
+
+.card-container {
+  box-shadow: 4px 4px 12px #0000001c;
+  background-color: #fff;
+  position: relative;
+  border-radius: 10px;
+  padding: 7px 30px 10px 30px;
+  position: relative;
+  height: 125px;
+
+  &__top-icon-continer {
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #4fdfb1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    // text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    margin-left: 31px;
+  }
+
+  &__content {
+    color: #272727;
+  }
+}
+
+.currency-style{
+  font-size: 11px;
+}
+
+.payment-done-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.dashboardCard__resellers-activations,
+.dashboardCard__platforms,
+.dashboardCard__,
+.dashboardCard__devices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 15px;
+  gap: 10px;
+
+  .values {
+    font-size: 15.5px;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+.dashboardCard__values {
+  font-size: 15.5px;
+}
+
+@media screen and (max-width: 1287px) {
+  .dashboard-information-cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}

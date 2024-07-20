@@ -1,0 +1,89 @@
+@import "../public/assets/style/variables.scss";
+@import "../src/layout/style/colors.scss";
+
+.profile-dropdown-component {
+  .ant-dropdown-menu-item,
+  .ant-dropdown-menu-submenu-title {
+    padding: 0 !important;
+  }
+
+  .ant-dropdown-menu-item {
+    .ant-dropdown-menu-item-active {
+      margin: 0 !important;
+    }
+  }
+}
+.header-tigger-btn.ant-btn.ant-btn-text {
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.ant-menu-item.sidbar_menu_iteam__UpxUY {
+  position: relative;
+
+  .pro-icon {
+    position: absolute;
+    top: 0px;
+    right: 41px;
+  }
+
+  .refferal-resellerpro-icon {
+    position: absolute;
+    top: -5px !important;
+    right: 2px !important;
+  }
+}
+
+.ant-dropdown-menu {
+  padding: 0 !important;
+}
+
+.ant-dropdown-menu-item-icon {
+  margin-left: 8px;
+}
+
+.label-icon-container,
+.submenu-label-icon-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .ant-menu-submenu {
+//   &:active {
+//     background-color: red !important;
+//   }
+//   &.ant-menu-submenu-inline {
+//     &:active {
+//       background-color: red !important;
+//     }
+//   }
+// }
+
+@media (max-width: 576px) {
+  .ant-table-filter-dropdown {
+    position: relative;
+  }
+
+  .ant-picker-panel-container {
+    position: absolute;
+  }
+
+  .ant-picker-panels {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar.ant-layout-sider.ant-layout-sider-dark {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+  .layout.ant-layout {
+    min-height: 100vh;
+  }
+}

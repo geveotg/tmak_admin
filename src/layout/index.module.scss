@@ -1,0 +1,37 @@
+@import "../../public/assets/style/variables.scss";
+
+.site-layout {
+    display: flex;
+    width: 100%;
+}
+
+.site-layout-background {
+    height: 80vh;
+    overflow-y: auto;
+    // overflow-x: hidden;
+    padding: 15px;
+}
+
+.logo-wrapper {
+    margin-top: 10px;
+    // height: 90px;
+    overflow: hidden;
+}
+
+.logo {
+    margin: 20px;
+    display: flex;
+
+    img {
+        width: 32%;
+        width: 100px;
+        min-width: 45px;
+        margin: 0% auto;
+    }
+}
+
+@media screen and (max-width:1413px) {
+    .site-layout-background{
+        overflow-x: hidden;
+    }
+}

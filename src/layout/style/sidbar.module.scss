@@ -1,0 +1,108 @@
+@import "../index.module.scss";
+@import "../style/colors.scss";
+
+.sidebar {
+  :global .ant-menu span {
+    color: $link-color !important;
+  }
+
+  :global .ant-menu-submenu-selected {
+    color: $active-color !important;
+    span {
+      color: $active-color !important;
+    }
+    .ant-menu-submenu-arrow {
+      color: $active-color !important;
+    }
+  }
+
+  :global .ant-menu-submenu-title {
+    color: $link-color !important;
+
+    span {
+      color: $link-color !important;
+    }
+    .ant-menu-submenu-arrow {
+      color: $link-color !important;
+    }
+  }
+
+  :global .ant-menu-item-active:active {
+
+    span {
+      color: $active-color !important;
+    }
+  }
+
+  :global .ant-menu-item-selected {
+    background-color: $active-background !important;
+
+    span {
+      color: $active-color !important;
+    }
+    a {
+      color: $active-color !important;
+    }
+
+    // svg{
+    //   fill: $active-color !important;
+    // }
+  }
+
+  :global .ant-menu-item-group-title {
+    color: $link-color !important ;
+  }
+
+  :global .ant-menu-submenu-title {
+    color: $link-color !important;
+
+    .ant-menu-submenu-arrow {
+      color: $link-color !important;
+    }
+  }
+
+  :global .ant-menu-sub {
+    background-color: transparent !important;
+
+  }
+
+  .menu_iteam {
+    color: $link-color !important;
+  }
+
+  .menu_item_link {
+    color: $link-color !important;
+  }
+}
+
+.sidebar-footer-section {
+  color: $link-color;
+  margin-left: 24px;
+  position: relative;
+  bottom: -56px;
+}
+
+.pro-icon {
+  position: absolute;
+  right: 41px;
+  margin-top: 14px;
+}
+
+.messagesCount_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.messagesCount {
+  margin-left: 20px;
+  border: 2px solid #ff000000;
+  height: 20px;
+  width: 20px;
+  background: #b34040;
+  font-size: 10px;
+  color: #fcfcfc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
