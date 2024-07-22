@@ -149,7 +149,16 @@ function Publications() {
             width: "100px",
             dataIndex: "description",
             key: "description",
-            ...getColumnSearchProps(),
+            render: (record, text, index) => {
+                if (record) {
+                    const content = record;
+                    return (
+                        <Popover content={content}>
+                            <div className={classes["ref-link"]}>{record}</div>
+                        </Popover>
+                    );
+                }
+            },
         },
 
         {

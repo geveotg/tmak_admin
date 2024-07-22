@@ -1,6 +1,6 @@
 import REQUESTS from "../../api/requests";
 import { useEffect, useState, useContext } from "react";
-import { Table, Button, Input, Modal, DatePicker } from "antd";
+import { Table, Button, Input, Modal, DatePicker, Popover } from "antd";
 import { emptyContext } from "../../context_empty/context_empty";
 
 import { useSelector } from "react-redux";
@@ -147,6 +147,12 @@ function Categories() {
             align: "center",
 
             ...getColumnSearchProps(),
+            render: (record, text, index) => {
+                if (record) {
+                    const content = JSON.parse(record)["arm"];
+                    return <div className={classes["ref-link"]}>{content}</div>;
+                }
+            },
         },
         {
             title: `Surname`,
@@ -155,14 +161,24 @@ function Categories() {
             align: "center",
 
             ...getColumnSearchProps(),
+            render: (record, text, index) => {
+                if (record) {
+                    const content = JSON.parse(record)["arm"];
+                    return <div className={classes["ref-link"]}>{content}</div>;
+                }
+            },
         },
         {
             title: `Position`,
             dataIndex: "position",
             key: "position",
             align: "center",
-
-            ...getColumnSearchProps(),
+            render: (record, text, index) => {
+                if (record) {
+                    const content = JSON.parse(record)["arm"];
+                    return <div className={classes["ref-link"]}>{content}</div>;
+                }
+            },
         },
 
         {
@@ -171,7 +187,16 @@ function Categories() {
             key: "education",
             align: "center",
 
-            ...getColumnSearchProps(),
+            render: (record, text, index) => {
+                if (record) {
+                    const content = JSON.parse(record)["arm"];
+                    return (
+                        <Popover content={content}>
+                            <div className={classes["ref-link"]}>{content}</div>
+                        </Popover>
+                    );
+                }
+            },
         },
         {
             title: `Experience`,
@@ -179,7 +204,16 @@ function Categories() {
             key: "experience",
             align: "center",
 
-            ...getColumnSearchProps(),
+            render: (record, text, index) => {
+                if (record) {
+                    const content = JSON.parse(record)["arm"];
+                    return (
+                        <Popover content={content}>
+                            <div className={classes["ref-link"]}>{content}</div>
+                        </Popover>
+                    );
+                }
+            },
         },
         {
             title: `Trainings`,
@@ -187,7 +221,16 @@ function Categories() {
             key: "trainings",
             align: "center",
 
-            ...getColumnSearchProps(),
+            render: (record, text, index) => {
+                if (record) {
+                    const content = JSON.parse(record)["arm"];
+                    return (
+                        <Popover content={content}>
+                            <div className={classes["ref-link"]}>{content}</div>
+                        </Popover>
+                    );
+                }
+            },
         },
 
         {
@@ -195,7 +238,7 @@ function Categories() {
             width: "150px",
             dataIndex: "image",
             render: (record, text, index) => {
-                return <img width={100} src={`http://localhost:3005${record}`} />;
+                return <img width={100} src={`http://84.21.171.97:3005${record}`} />;
             },
         },
 

@@ -71,15 +71,28 @@ const UserPackageListDrawer = ({
     const onFinish = (values) => {
         setLoading(true);
 
-        const { name, surname, education, experience, trainings, position } = values;
+        const {
+            name,
+            name_eng,
+            surname,
+            surname_eng,
+            education,
+            education_eng,
+            experience,
+            experience_eng,
+            trainings,
+            trainings_eng,
+            position,
+            position_eng,
+        } = values;
 
         const formData = new FormData();
-        formData.append("name", name);
-        formData.append("surname", surname);
-        formData.append("education", education);
-        formData.append("experience", experience);
-        formData.append("trainings", trainings);
-        formData.append("position", position);
+        formData.append("name", JSON.stringify({ arm: name, eng: name_eng }));
+        formData.append("surname", JSON.stringify({ arm: surname, eng: surname_eng }));
+        formData.append("education", JSON.stringify({ arm: education, eng: education_eng }));
+        formData.append("experience", JSON.stringify({ arm: experience, eng: experience_eng }));
+        formData.append("trainings", JSON.stringify({ arm: trainings, eng: trainings_eng }));
+        formData.append("position", JSON.stringify({ arm: position, eng: position_eng }));
         if (categoryImg.length > 0) {
             for (let i = 0; i < categoryImg.length; i++) {
                 formData.append("image", categoryImg[i]);
@@ -136,30 +149,58 @@ const UserPackageListDrawer = ({
             form.setFields([
                 {
                     name: "name",
-                    value: current?.name,
+                    value: JSON.parse(current?.name)["arm"],
+                },
+
+                {
+                    name: "name_eng",
+                    value: JSON.parse(current?.name)["eng"],
                 },
                 {
                     name: "surname",
-                    value: current?.surname,
+                    value: JSON.parse(current?.surname)["arm"],
+                },
+
+                {
+                    name: "surname_eng",
+                    value: JSON.parse(current?.surname)["eng"],
                 },
                 {
                     name: "education",
-                    value: current?.education,
+                    value: JSON.parse(current?.education)["arm"],
+                },
+
+                {
+                    name: "education_eng",
+                    value: JSON.parse(current?.education)["arm"],
                 },
                 {
                     name: "experience",
-                    value: current?.experience,
+                    value: JSON.parse(current?.experience)["arm"],
+                },
+
+                {
+                    name: "experience_eng",
+                    value: JSON.parse(current?.experience)["eng"],
                 },
                 {
                     name: "trainings",
-                    value: current?.trainings,
+                    value: JSON.parse(current?.trainings)["arm"],
+                },
+                {
+                    name: "trainings_eng",
+                    value: JSON.parse(current?.trainings)["eng"],
                 },
                 {
                     name: "position",
-                    value: current?.position,
+                    value: JSON.parse(current?.position)["arm"],
+                },
+                {
+                    name: "position_eng",
+                    value: JSON.parse(current?.position)["eng"],
                 },
             ]);
-            setCategoryImgPath(`http://localhost:3005${current?.image}`);
+            setCategoryImgPath(`http://tmak.am${current?.image}`);
         } else {
             form.resetFields();
         }
@@ -201,9 +242,35 @@ const UserPackageListDrawer = ({
                     >
                         <Input />
                     </Form.Item>
+
+                    <Form.Item
+                        label={"name Eng"}
+                        name="name_eng"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input name",
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
                     <Form.Item
                         label={"surname"}
                         name="surname"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input surname",
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item
+                        label={"surname eng"}
+                        name="surname_eng"
                         rules={[
                             {
                                 required: true,
@@ -225,9 +292,35 @@ const UserPackageListDrawer = ({
                     >
                         <Input />
                     </Form.Item>
+
+                    <Form.Item
+                        label={"education eng"}
+                        name="education_eng"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input education",
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
                     <Form.Item
                         label={"experience"}
                         name="experience"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input experience",
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item
+                        label={"experience eng"}
+                        name="experience_eng"
                         rules={[
                             {
                                 required: true,
@@ -252,8 +345,34 @@ const UserPackageListDrawer = ({
                     </Form.Item>
 
                     <Form.Item
+                        label={"trainings eng"}
+                        name="trainings_eng"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input trainings",
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item
                         label={"position"}
                         name="position"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input position",
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item
+                        label={"position eng"}
+                        name="position_eng"
                         rules={[
                             {
                                 required: true,

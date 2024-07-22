@@ -4,7 +4,8 @@ const CONSTANTS = {
     // APP_NAME: process.env.REACT_APP_APPLICATION_NAME || "XPLAYER ADMIN",
     // API_HOST: "https://example.com",
     // API_HOST: "http://84.21.171.97:3005",
-    API_HOST: "http://localhost:3005",
+    API_HOST: "http://tmak.am",
+    // API_HOST: "http://localhost:3005",
 
     // APP_COLOR: process.env.REACT_APP_COLOR || "black",
     // ACTIVE_COLOR: process.env.REACT_APP_ACTIVE_COLOR || "green",
