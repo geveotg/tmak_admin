@@ -143,6 +143,12 @@ function Publications() {
             dataIndex: "title",
             key: "title",
             ...getColumnSearchProps(),
+            render: (record, text, index) => {
+                if (record) {
+                    const content = JSON.parse(record)["arm"];
+                    return <div className={classes["ref-link"]}>{content}</div>;
+                }
+            },
         },
         {
             title: `Description`,
@@ -151,10 +157,10 @@ function Publications() {
             key: "description",
             render: (record, text, index) => {
                 if (record) {
-                    const content = record;
+                    const content = JSON.parse(record)["arm"];
                     return (
                         <Popover content={content}>
-                            <div className={classes["ref-link"]}>{record}</div>
+                            <div className={classes["ref-link"]}>{content}</div>
                         </Popover>
                     );
                 }

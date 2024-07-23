@@ -25,8 +25,9 @@ const SandalsTableEditDrawer = ({ onClose, visible, translation, followAddElemen
     const getData = () => {
         REQUESTS.NEWS.GETPRODUCT(id, (data) => {
             setCurrent(data?.message);
-            console.log(data?.message?.news_images, 78914551);
-            setUrlNesImg(data?.message?.news_images);
+            if (data?.message?.news_images) {
+                setUrlNesImg(data?.message?.news_images);
+            }
         });
     };
 
@@ -119,7 +120,10 @@ const SandalsTableEditDrawer = ({ onClose, visible, translation, followAddElemen
             text: "",
         });
 
-        let body = values;
+        let body = {
+            title: JSON.stringify({ arm: values.title, eng: values.title_eng }),
+            description: JSON.stringify({ arm: values.description, eng: values.description_eng }),
+        };
 
         function callback() {
             if (!current) {
@@ -168,12 +172,20 @@ const SandalsTableEditDrawer = ({ onClose, visible, translation, followAddElemen
             form.setFields([
                 {
                     name: "title",
-                    value: current.title,
+                    value: JSON.parse(current.title)["arm"],
+                },
+                {
+                    name: "title_eng",
+                    value: JSON.parse(current.title)["eng"],
                 },
 
                 {
                     name: "description",
-                    value: current.description,
+                    value: JSON.parse(current.description)["arm"],
+                },
+                {
+                    name: "description_eng",
+                    value: JSON.parse(current.description)["eng"],
                 },
             ]);
         } else {
@@ -213,9 +225,35 @@ const SandalsTableEditDrawer = ({ onClose, visible, translation, followAddElemen
                     >
                         <Input />
                     </Form.Item>
+
+                    <Form.Item
+                        label={"Tile eng"}
+                        name="title_eng"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input title",
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
                     <Form.Item
                         label={"Description"}
                         name="description"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input description",
+                            },
+                        ]}
+                    >
+                        <TextArea />
+                    </Form.Item>
+
+                    <Form.Item
+                        label={"Description eng"}
+                        name="description_eng"
                         rules={[
                             {
                                 required: true,
@@ -245,7 +283,7 @@ const SandalsTableEditDrawer = ({ onClose, visible, translation, followAddElemen
                                     <Image
                                         key={i}
                                         className={classes["upload_img"]}
-                                        src={`http://localhost:3005${el.path}`}
+                                        src={`http://tmak.am${el.path}`}
                                     />
                                     <Button
                                         type="primary"

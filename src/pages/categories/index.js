@@ -30,7 +30,7 @@ function Categories() {
     const [visible, setVisible] = useState(false);
     const [edicategories, setEdicategories] = useState(null);
     const [date, setDate] = useState("");
-    const [categories, setCategories] = useState(categoriesData.message);
+    const [categories, setCategories] = useState([]);
     const [sort, setSort] = useState(["id", "DESC"]);
     const [sandalTable, setSandalTable] = useState(null);
     const [sandalTableVisible, setSandalTableVisible] = useState(null);

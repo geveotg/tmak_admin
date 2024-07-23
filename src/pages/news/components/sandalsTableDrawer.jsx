@@ -113,8 +113,11 @@ const SandalsTableDrawer = ({
 
         const formData = new FormData();
 
-        formData.append("title", values.title);
-        formData.append("description", values.description);
+        formData.append("title", JSON.stringify({ arm: values.title, eng: values.title_eng }));
+        formData.append(
+            "description",
+            JSON.stringify({ arm: values.description, eng: values.description_eng })
+        );
 
         if (SandalsImg.length > 0) {
             for (let i = 0; i < SandalsImg.length; i++) {
@@ -223,9 +226,35 @@ const SandalsTableDrawer = ({
                     >
                         <Input />
                     </Form.Item>
+
+                    <Form.Item
+                        label={"Tile eng"}
+                        name="title_eng"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input title",
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
                     <Form.Item
                         label={"Description"}
                         name="description"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input description",
+                            },
+                        ]}
+                    >
+                        <TextArea />
+                    </Form.Item>
+
+                    <Form.Item
+                        label={"Description eng"}
+                        name="description_eng"
                         rules={[
                             {
                                 required: true,
@@ -259,7 +288,7 @@ const SandalsTableDrawer = ({
                         <div className={classes["app_uload_form"]}>
                             <Upload
                                 // onChange={({ file }) => {
-                                //     createFileList(file);
+                                //     crea  teFileList(file);
                                 // }}
                                 {...propsSandalsImg}
                                 fileList={[]}
