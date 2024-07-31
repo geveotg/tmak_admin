@@ -77,15 +77,15 @@ function App() {
                         <Route path="/login" element={<Login />} />
 
                         <Route
-                            path="/DashboardPage"
+                            path="/"
                             element={
                                 <PrivateRoute>
                                     <DashboardPage />
                                 </PrivateRoute>
                             }
                         >
-                            <Route index element={<Dashboard />} />
-                            <Route path="categories" element={<Categories />} />
+                            {/* <Route index element={<Dashboard />} /> */}
+                            <Route index element={<Categories />} />
                             <Route path="news" element={<News />} />
                             <Route path="publications" element={<Publications />} />
                             {/* <Route path="paymentHistory" element={<PaymentHistory />} /> */}

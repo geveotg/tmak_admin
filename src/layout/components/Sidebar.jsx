@@ -37,16 +37,16 @@ function Sidbar({ collapsed, setOpen }) {
     const [current, setCurrent] = useState(location.pathname);
 
     const items = [
-        getItem(
-            <Link className={classes["menu_item_link"]} to={"./"}>
-                {translation["Dashboard"] || TEXT["Dashboard"]}
-            </Link>,
-            "/DashboardPage",
-            <DashboardOutlined />
-        ),
+        // getItem(
+        //     <Link className={classes["menu_item_link"]} to={"./"}>
+        //         {translation["Dashboard"] || TEXT["Dashboard"]}
+        //     </Link>,
+        //     "/DashboardPage",
+        //     <DashboardOutlined />
+        // ),
 
         getItem(
-            <Link className={classes["menu_item_link"]} to={"./Categories"}>
+            <Link className={classes["menu_item_link"]} to={"./"}>
                 Staff
             </Link>,
             "/DashboardPage/Categories",
